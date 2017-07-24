@@ -51,7 +51,8 @@ function tweets() {
     client.get('statuses/user_timeline', params, function (err, data, response) {
         if (!err) {
             for (i = 0; i < data.length; i++) {
-                console.log(data[i].created_at + "\n----------------------------------\n" + "  " + data[i].text + "\n----------------------------------");
+                console.log(data[i].created_at + "\n----------------------------------")
+                console.log(data[i].text + "\n----------------------------------");
             }
         };
     });
